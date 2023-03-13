@@ -1,14 +1,23 @@
 <template>
     <tr>
-    <slot :row="row" name="row">
-        
-        <td v-for="data in row">{{ data }}</td>
-    
-    </slot>
-</tr>
-    
-</template>
-
-<script setup>
-defineProps(['row'])
-</script>
+      <td v-for="(column, index) in columns" :key="index">
+        <slot :name="`cell-${column.field}`" :row="row">{{ row[column.field] }}</slot>
+      </td>
+    </tr>
+  </template>
+  
+  <script>
+  export default {
+    props: {
+      row: {
+        type: Object,
+        required: true,
+      },
+      columns: {
+        type: Array,
+        required: true,
+      },
+    },
+  };
+  </script>
+  

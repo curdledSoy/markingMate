@@ -1,19 +1,20 @@
 <template>
-    <table class="transition" >
+    <table class="transition table-auto" >
       <thead>
         <tr>
-          <th></th>
-          <th v-for="grade in grades" :key="grade.id">{{ grade.name }}</th>
+          <th class="text-left">Grades/Objectives</th>
+          <th v-for="grade in grades" :key="grade.id"><h1 v-if="!isEditing">{{ grade.name }}</h1> <input class="dark:bg-gray-600" type=text :value="grade.name" @change="emits('updateGrades', grade.id, $event.target.value)" v-else></th>
           <th v-if="isEditing">
-            <td><BaseButton>New Grade</BaseButton></td>
+            <td><BaseButton @click="emits('addGrade')">New Grade</BaseButton></td>
           </th>
+          
         </tr>
       </thead>
       <tbody>
         <tr v-for="objective in objectives" :key="objective.id">
           <td>{{ objective.name }}</td>
           <td v-for="grade in grades" :key="grade.id">
-            <div v-if="rubric.outcomes[objective.id] && rubric.outcomes[objective.id][grade.id]">
+            <div class="w-fit" v-if="rubric.outcomes[objective.id] && rubric.outcomes[objective.id][grade.id]">
               <label class="transition" v-if="!isEditing">
               <input class="transition"  v-if="isMarking" type="radio"
                      :name="'objective-' + objective.id"
@@ -23,9 +24,10 @@
               </label>
               <input class="dark:bg-gray-600" v-else type="text" :value=" rubric.outcomes[objective.id][grade.id].outcome" @change="emits('updateOutcome', objective.id, grade.id, $event.target.value)" />
               <div class="description">
-                <textarea class="dark:bg-gray-600 w-full focus:border-none" v-if="isEditing" :value="rubric.outcomes[objective.id][grade.id].description" @change="emits('updateOutcomeDesc', objective.id, grade.id, $event.target.value)"/>
+                <textarea class="dark:bg-gray-600 w-full focus:border-none max-w-min inline-block" v-if="isEditing" :value="rubric.outcomes[objective.id][grade.id].description" @change="emits('updateOutcomeDesc', objective.id, grade.id, $event.target.value)"/>
                 <p v-else>{{ rubric.outcomes[objective.id][grade.id].description }}</p>
-                </div>
+              </div>
+              
             </div>
           </td>
         </tr>
@@ -57,7 +59,7 @@
     }
     })
 
-    let emits = defineEmits(['updateObjectives', 'updateGrades', 'updateOutcome', 'updateOutcomeDesc'])
+    let emits = defineEmits(['updateObjectives', 'updateGrades', 'updateOutcome', 'updateOutcomeDesc', 'addGrade','addObjective'])
 
     let objectives = computed({get() {
       return props.rubric.objectives
