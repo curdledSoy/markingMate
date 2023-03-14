@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cuZC0S5koQkpDrE1K9895bgF03ec1CvHGPiJ6DGeOCKSkHJftwI9H0lzdRRrMZeEA3gMc2YMsxujG5fw7k4Lug==",
+  "dgSpecHash": "uzUqdZT91EEO4eQ60qvMHr9Ce8e1EW0QQJQfh/Iznv2OdT6Fm/ZExA1POubguuobSrEyjIDUXBnTC6Rl+X2gsQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\denze\\OneDrive\\Documents\\GitHub\\markingMate\\markingMate\\markingMate\\markingMate.csproj",
+  "projectFilePath": "C:\\Users\\denze\\Documents\\uni work\\399\\markingMate\\markingMate\\markingMate\\markingMate.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\denze\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.3\\microsoft.data.sqlite.core.7.0.3.nupkg.sha512",
     "C:\\Users\\denze\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.3\\microsoft.entityframeworkcore.7.0.3.nupkg.sha512",

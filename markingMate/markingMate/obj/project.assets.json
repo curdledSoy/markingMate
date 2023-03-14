@@ -1318,11 +1318,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\denze\\OneDrive\\Documents\\GitHub\\markingMate\\markingMate\\markingMate\\markingMate.csproj",
+      "projectUniqueName": "C:\\Users\\denze\\Documents\\uni work\\399\\markingMate\\markingMate\\markingMate\\markingMate.csproj",
       "projectName": "markingMate",
-      "projectPath": "C:\\Users\\denze\\OneDrive\\Documents\\GitHub\\markingMate\\markingMate\\markingMate\\markingMate.csproj",
+      "projectPath": "C:\\Users\\denze\\Documents\\uni work\\399\\markingMate\\markingMate\\markingMate\\markingMate.csproj",
       "packagesPath": "C:\\Users\\denze\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\denze\\OneDrive\\Documents\\GitHub\\markingMate\\markingMate\\markingMate\\obj\\",
+      "outputPath": "C:\\Users\\denze\\Documents\\uni work\\399\\markingMate\\markingMate\\markingMate\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\denze\\AppData\\Roaming\\NuGet\\NuGet.Config",
