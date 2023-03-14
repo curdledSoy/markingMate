@@ -39,5 +39,5 @@ let config = [
 ];
 let isDark = useDark();
 let toggleDark = useToggle(isDark);
-let { status, signOut } = useSession();
+let { status, signOut } = {status:'unauthenticated', signOut:function(){}};
 </script>
